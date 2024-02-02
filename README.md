@@ -17,7 +17,7 @@ SELECT district FROM address WHERE district LIKE 'K%a';
 ```
 
 - результат
-  <img src="images/Task_1.png" alt="Task_1.png" width="300" height="auto">
+  <img src="images/Task_1_.png" alt="Task_1.png" width="300" height="auto">
 
 ---
 
