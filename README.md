@@ -13,11 +13,11 @@
 **Решение**
 
 ```
-SELECT district FROM address WHERE district LIKE 'K%a';
+SELECT district FROM address WHERE (district LIKE 'K%a' AND district NOT LIKE '% %');
 ```
 
 - результат
-  <img src="images/Task_1_.png" alt="Task_1.png" width="300" height="auto">
+  <img src="images/Task_1_1.png" alt="Task_1.png" width="300" height="auto">
 
 ---
 
@@ -30,7 +30,7 @@ SELECT district FROM address WHERE district LIKE 'K%a';
 Так как оператор BETWEEN (x BETWEEN a AND b) является более компактной записью совокупности ((x >= a) AND (x <= b)), то использую скрипт:
 
 ```
-SELECT * FROM payment WHERE (payment_date BETWEEN '2005-06-15' AND '2005-07-18') AND amount > 10;
+SELECT * FROM payment WHERE (DATE(payment_date) BETWEEN '2005-06-15' AND '2005-07-18') AND amount > 10;
 ```
 
 - результат
